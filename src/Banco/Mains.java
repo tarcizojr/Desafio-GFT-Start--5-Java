@@ -13,6 +13,8 @@ public class Mains {
 			System.out.println("=== Menu ===");
 			System.out.println("1 - Criar Conta");
 			System.out.println("2 - Listar Conta");
+			System.out.println("3 - Verificar Conta");
+
 
 			String op = leitor.nextLine();
 			
@@ -56,6 +58,10 @@ public class Mains {
 			}
 			case "2":{
 				banco.listaContas();
+			}
+			case "3":{
+				System.out.println("Qual o CPF que deseja verificar: ");
+				banco.verificarConta(leitor.nextLine());
 			}
 			default:
 				System.out.println("Operaçao Invalida");
